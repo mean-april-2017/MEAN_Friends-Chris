@@ -1,0 +1,18 @@
+<h4>All Friends</h4>
+<input type="text" ng-model="searchText" placeholder="filter...">
+<table class="table table-striped">
+	<tr>
+		<th>Name</th><th>Update</th><th>Delete</th>
+	</tr>
+	<tr ng-repeat="friend in friends | filter: searchText">
+		<td>
+			<a href="/#!/friend/{{ friend._id }}"> {{ friend.firstName }} {{ friend.lastName }}</a>
+		</td>
+		<td>
+			<a class="btn btn-warning" href="/#!/edit/{{ friend._id }}" >Edit</a>
+		</td>
+		<td>
+			<a class="btn btn-danger" href="" ng-click="deleteFriend(friend._id)">Delete</a>
+		</td>
+	</tr>
+</table>

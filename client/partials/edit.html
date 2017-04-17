@@ -1,0 +1,24 @@
+<h4>Edit Friend</h4>
+<form>
+	<table>
+		<tr>
+			<td>First Name:</td> <td><input type="text" ng-model="friend.firstName"></td>
+		</tr>
+		<tr>
+			<td>Last Name:</td> <td><input type="text" ng-model="friend.lastName"></td>
+		</tr>
+		<tr>
+			<td>Birthdate:</td> <td><input id="datepicker" type="text" ng-model="friend.birthdate"></td>
+		</tr>
+		<tr>
+			<td><input type="submit" value="Update Friend" ng-click="updateFriend()"></td>
+		</tr>
+	</table>
+</form>
+
+<!-- Datepicker (jQueryUI) -->
+	<script type="text/javascript">
+	$( function() {
+	    $( "#datepicker" ).datepicker();
+	} );
+  </script>
